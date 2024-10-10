@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: lightblue; /* Light background for contrast */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#message {
+    font-size: 24px; /* Adjusts the font size */
+    font-family: Arial, sans-serif; /* Sets the font family */
+    font-weight: bold; /* Makes the font bold */
+    color: #333; /* Sets the text color (dark gray) */
+    text-align: center; /* Centers the text */
+    margin-top: 20px; /* Adds space above the text */
+    position:relative;
+    top:-100px;
+    transition: opacity 0.5s ease; /* Smooth transition for fading effect */
+    opacity: 1; /* Full opacity by default */
+}
+
+.hidden {
+    opacity: 0; /* Sets opacity to 0 to make it invisible */
+    visibility: hidden; /* Hides the element completely */
+    height: 0; /* Removes the height */
+    overflow: hidden; /* Hides overflow */
+    transition: opacity 0.5s ease, height 0s 0.5s; /* Waits until opacity transition ends to remove height */
+}
+
+
+#display {
+    background-color: #ccc; /* Light grey background for the display */
+    border: 2px solid #999; /* Darker border for the display */
+    border-radius: 8px; /* Rounded corners for the display */
+    padding: 10px;
+    height: 20px;
+    width: 200px; /* Set width for the display */
+    position: relative;
+    top: -400px; /* Moves the display higher */
+    text-align: center;
+    font-size: 20px; /* Larger font size for better visibility */
+    margin-bottom: 20px; /* Space between display and keypad */
+}
+
+#keypad {
+    display: inline-block;
+    background-color: #ddd; /* Light grey background for the keypad */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for the keypad */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for 3D effect */
+    height: 380px;
+    width:250px;
+    position: relative; /* Or absolute if necessary */
+    top: -100px; /* Adjust the value to move it higher or lower */
+    margin: 0 auto; /* To center it */
+    width: fit-content;
+}
+
+.row {
+    display: flex;
+    justify-content: center; /* Center buttons in the row */
+    margin: 5px 0; /* Space between rows */
+}
+
+button {
+    background-color: #aaa; /* Grey background for buttons */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners for buttons */
+    color: white; /* White text color */
+    font-size: 20px; /* Larger font size for buttons */
+    margin: 5px; /* Space between buttons */
+    padding: 15px 20px; /* Padding for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    width:80px;
+    height:80px;
+}
+
+button:hover {
+    background-color: #888; /* Darker grey on hover */
+}
