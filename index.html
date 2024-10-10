@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <audio id="beep-sound" src="beep.mp3"></audio> <!-- Beep sound file -->
+    <audio id="hooray-sound" src="correct.mp3"></audio> <!-- Replace with your hooray sound file -->
+    <audio id="incorrect-sound" src="incorrect.mp3"></audio> <!-- Replace with your incorrect sound file -->
+    <title>Code Entry Safe</title>
+</head>
+<body>
+    <h1>Enter Code</h1>
+    <div id="display"> </div> <!-- Display area for entered numbers -->
+    <div id="message" class="hidden">Well Done!</div>
+
+    <div id="keypad">
+        <div class="row">
+            <button onclick="enterNumber(1)">1</button>
+            <button onclick="enterNumber(2)">2</button>
+            <button onclick="enterNumber(3)">3</button>
+        </div>
+        <div class="row">
+            <button onclick="enterNumber(4)">4</button>
+            <button onclick="enterNumber(5)">5</button>
+            <button onclick="enterNumber(6)">6</button>
+        </div>
+        <div class="row">
+            <button onclick="enterNumber(7)">7</button>
+            <button onclick="enterNumber(8)">8</button>
+            <button onclick="enterNumber(9)">9</button>
+        </div>
+        <div class="row">
+            <button onclick="enterNumber(0)">0</button>
+            <button onclick="checkCode()">✔</button> <!-- Check button -->
+            <button onclick="deleteLast()">✖</button> <!-- Delete button added -->
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
